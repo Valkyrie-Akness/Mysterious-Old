@@ -1,0 +1,13 @@
+#!/bin/sh
+while true
+do
+/usr/lib/jvm/adoptopenjdk-8-hotspot-amd64/bin/java -Dlauncher.noJAnsi=true -Xincgc -cp ServerWrapper.jar:Thermos.jar pro.gravit.launcher.server.ServerWrapper
+echo "Чтобы остановить сервер зажмите Ctrl + C!"
+echo "Запускаем рестарт сервера..."
+for i in 2
+do
+	echo "..."
+	sleep 5
+done
+echo "Перезагрузка запущена!"
+done
